@@ -169,47 +169,77 @@ int main() {
     printf("\n");
 
     //calculos das comparações das cartas
-    resultadoPopulacao = (float) populacao1 > populacao2;
-    resultadoPT = (float) pontos_turisticos1 > pontos_turisticos2;
-    resultadoPIB = (float) PIB1 > PIB2;
-    resultadoArea = (float) area_emkm1 > area_emkm2;
-    resultadoPIBper = (float) PIBpercapita1 > PIBpercapita2;
-    resultadoSuperpoder = (float) Superpoder1 > Superpoder2;
-    resultadoDensidade = (float) Densidadepopulacional1 < Densidadepopulacional2;
+    printf("==============\n");
+    printf("População:\n");
 
-    //Mostra dos resultados das comparações
-    printf("Se o resultado for 1, Carta 1 vence se o resultado for 0, Carta 2 vence.\n");
+    if (populacao1 > populacao2){
+        printf("Carta 1 Venceu\n");
+    } else {
+        printf("Carta 2 Venceu\n");
+    }
 
-    printf("\n");
+    printf("==============\n");
 
-    printf("População: %.2f\n", resultadoPopulacao);
+    printf("Densidade populacional:\n");
 
-    printf("\n");
+    if (Densidadepopulacional1 < Densidadepopulacional2){
+        printf("Carta 1 Venceu\n");
+    } else {
+        printf("Carta 2 Venceu\n");
+    }
 
-    printf("Pontos Turisticos: %f\n", resultadoPT);
+    printf("==============\n");
 
-    printf("\n");
+    printf("Área em Km²:\n");
 
-    printf("PIB: %f\n", resultadoPIB);
+    if (area_emkm1 > area_emkm2){
+        printf("Carta 1 Vence\n");
+    } else {
+        printf("Carta 2 Vence\n");
+    }
 
-    printf("\n");
+    printf("==============\n");
 
-    printf("Área em Km²: %.2f\n", resultadoArea);
+    printf("PIB:\n");
 
-    printf("\n");
+    if (PIB1 > PIB2){
+        printf("Carta 1 Vence\n");
+    } else {
+        printf("Carta 2 Vence\n");
+    }
 
-    printf("PIB per capita: %.2f\n", resultadoPIBper);
+    printf("==============\n");
 
-    printf("\n");
+    printf("PIB per capita:\n");
 
-    printf("Super poder %.2f\n", resultadoSuperpoder);
+    if (PIBpercapita1 > PIBpercapita2){
+        printf("Carta 1 Vence\n");
+    } else {
+        printf("Carta 2 Vence\n");
+    }
 
-    printf("\n");
+    printf("==============\n");
 
-    printf("Densidade populacional: %.2f\n", resultadoDensidade);
+    printf("Super Poder:\n");
 
-    printf("\n");
+    if (Superpoder1 > Superpoder2){
+        printf("Carta 1 Vence\n");
+    } else {
+        printf("Carta 2 Vence\n");
+    }
 
+    printf("==============\n");
+
+    printf("Pontos Túristicos:\n");
+
+    if (pontos_turisticos1 > pontos_turisticos2){
+        printf("Carta 1 Vence\n");
+    } else {
+        printf("Carta 2 Vence\n");
+    }
+
+    printf("==============\n");
+    
     return 0;
     //código finalizado e programa tudo certo com as solicitações
 }
