@@ -92,3 +92,74 @@ Ao concluir qualquer um dos níveis, você terá dado um passo importante no des
 
 Equipe de Ensino - MateCheck
 content_copy
+
+printf("==============\n");
+    printf("População:\n");
+
+    if (populacao1 > populacao2){
+        printf("Carta 1 Venceu\n");
+    } else {
+        printf("Carta 2 Venceu\n");
+    }
+
+    printf("==============\n");
+
+    printf("Densidade populacional:\n");
+
+    if (Densidadepopulacional1 < Densidadepopulacional2){
+        printf("Carta 1 Venceu\n");
+    } else {
+        printf("Carta 2 Venceu\n");
+    }
+
+    printf("==============\n");
+
+    printf("Área em Km²:\n");
+
+    if (area_emkm1 > area_emkm2){
+        printf("Carta 1 Vence\n");
+    } else {
+        printf("Carta 2 Vence\n");
+    }
+
+    printf("==============\n");
+
+    printf("PIB:\n");
+
+    if (PIB1 > PIB2){
+        printf("Carta 1 Vence\n");
+    } else {
+        printf("Carta 2 Vence\n");
+    }
+
+    printf("==============\n");
+
+    printf("PIB per capita:\n");
+
+    if (PIBpercapita1 > PIBpercapita2){
+        printf("Carta 1 Vence\n");
+    } else {
+        printf("Carta 2 Vence\n");
+    }
+
+    printf("==============\n");
+
+    printf("Super Poder:\n");
+
+    if (Superpoder1 > Superpoder2){
+        printf("Carta 1 Vence\n");
+    } else {
+        printf("Carta 2 Vence\n");
+    }
+
+    printf("==============\n");
+
+    printf("Pontos Túristicos:\n");
+
+    if (pontos_turisticos1 > pontos_turisticos2){
+        printf("Carta 1 Vence\n");
+    } else {
+        printf("Carta 2 Vence\n");
+    }
+
+    printf("==============\n");

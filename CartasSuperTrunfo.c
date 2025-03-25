@@ -1,19 +1,28 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 int main() {
     //essas sao as variaveis criadas por mim, com nomes de facil entendimento.
     char Estado1, Estado2;
-    char nome_cidade1[20], codigo_carta1[10], nome_cidade2[20], codigo_carta2[10];
+    char nome_cidade1[20], codigo_carta1[10], nome_cidade2[20], codigo_carta2[10], NomedoPais1[10], NomedoPais2[10];
     unsigned long int populacao1, pontos_turisticos1, populacao2, pontos_turisticos2;
     float PIB1, area_emkm1, PIB2, area_emkm2, PIBpercapita1, Densidadepopulacional1, PIBpercapita2, Densidadepopulacional2;
     float Superpoder1, Superpoder2;
     float resultadoPopulacao, resultadoPT, resultadoPIB, resultadoArea, resultadoPIBper, resultadoDensidade, resultadoSuperpoder;
-    
+    int opcao;
     //a maior parte do programa foi feito usando printf para imprimir as informações das cartar e scanf para capturar, usei tambem o fgets.
     //aqui eu peço as informações da primeira carta.
     //temos aqui o país Brasil com 8 estados diferentes A-H e cada estado com 4 cidades diferentes 1-4.
     //quando o programa te pedir o código da carta digite a letra que representa o estado e um número de 1 a 4 que represente a cidade Ex:E01, A02.
+
     printf("CARTA 1\n");
+    
+    printf("\n");
+
+    printf("Qual o nome do primeiro país?\n");
+    getchar();
+    fgets(NomedoPais1, 10, stdin);
 
     printf("\n");
     
@@ -65,7 +74,13 @@ int main() {
     printf("CARTA 2\n");
 
     printf("\n");
+
+    printf("Qual o nome do segundo País?\n");
+    getchar();
+    fgets(NomedoPais2, 10, stdin);
     
+    printf("\n");
+
     //Aqui coloquei o getchar para poder recapturar a informação da variável "Estado".
     getchar();
     printf("Qual o estado presente na carta?\n");
@@ -169,77 +184,80 @@ int main() {
     printf("\n");
 
     //calculos das comparações das cartas
-    printf("==============\n");
-    printf("População:\n");
+    printf("    ==============\n");
+    printf("ESCOLHA O QUE COMPARAR\n");
+    printf("    ==============\n");
 
-    if (populacao1 > populacao2){
-        printf("Carta 1 Venceu\n");
-    } else {
-        printf("Carta 2 Venceu\n");
-    }
-
-    printf("==============\n");
-
-    printf("Densidade populacional:\n");
-
-    if (Densidadepopulacional1 < Densidadepopulacional2){
-        printf("Carta 1 Venceu\n");
-    } else {
-        printf("Carta 2 Venceu\n");
-    }
-
-    printf("==============\n");
-
-    printf("Área em Km²:\n");
-
-    if (area_emkm1 > area_emkm2){
-        printf("Carta 1 Vence\n");
-    } else {
-        printf("Carta 2 Vence\n");
-    }
-
-    printf("==============\n");
-
-    printf("PIB:\n");
-
-    if (PIB1 > PIB2){
-        printf("Carta 1 Vence\n");
-    } else {
-        printf("Carta 2 Vence\n");
-    }
-
-    printf("==============\n");
-
-    printf("PIB per capita:\n");
-
-    if (PIBpercapita1 > PIBpercapita2){
-        printf("Carta 1 Vence\n");
-    } else {
-        printf("Carta 2 Vence\n");
-    }
-
-    printf("==============\n");
-
-    printf("Super Poder:\n");
-
-    if (Superpoder1 > Superpoder2){
-        printf("Carta 1 Vence\n");
-    } else {
-        printf("Carta 2 Vence\n");
-    }
-
-    printf("==============\n");
-
-    printf("Pontos Túristicos:\n");
-
-    if (pontos_turisticos1 > pontos_turisticos2){
-        printf("Carta 1 Vence\n");
-    } else {
-        printf("Carta 2 Vence\n");
-    }
-
-    printf("==============\n");
+    printf("1. Nome do país\n");//só para exibir informações, sem comparação direta
+    printf("2. População\n");
+    printf("3. Área\n");
+    printf("4. PIB\n");
+    printf("5. Número de pontos turísticos\n");
+    printf("6. Densidade demográfica\n");//Menor valor vence
+    scanf("%d", &opcao);
     
+    switch (opcao)
+    {
+    case 1: 
+        opcao == 1;
+            printf("%s\n", &NomedoPais1[10]);
+            printf("%s\n", &NomedoPais2[10]);
+        break;
+    case 2:
+        opcao == 2;
+            printf("POPULAÇÃO!\n");
+        if (populacao1 > populacao2){
+            printf("Carta 1 Venceu\n");
+        } else if  (populacao2 > populacao1){
+            printf ("Carta 2 Venceu\n");
+        } else {
+            printf("EMPATE!\n");
+        }  
+    case 3:
+        opcao == 3;
+            printf("ÁREA!\n");
+        if (area_emkm1 > area_emkm2){
+            printf("Carta 1 Vence\n");
+        } else if (area_emkm2 > area_emkm1){
+            printf("Carta 2 Vence\n");
+        } else { 
+            printf("EMPATE!\n");
+        }
+    case 4:
+        opcao == 4;
+            printf("PIB!\n");
+        if (PIB1 > PIB2){
+            printf("Carta 1 Vence\n");
+        } else if (PIB2 > PIB1){
+            printf("Carta 2 Vence\n");
+        } else { 
+            printf("EMPATE!\n");
+        }
+    case 5:
+        opcao == 5;
+            printf("NÚMERO DE PONTOS TURÍSTICOS!\n");
+        if (pontos_turisticos1 > pontos_turisticos2){
+            printf("Carta 1 Vence\n");
+        } else if (pontos_turisticos2 > pontos_turisticos1){
+            printf("Carta 2 Vence\n");
+        } else { 
+            printf("EMPATE!\n");
+        }
+        
+    case 6:
+        opcao == 6;
+            printf("DENSIDADE POPULACIONAL!\n");
+        if (Densidadepopulacional1 < Densidadepopulacional2){
+            printf("Carta 1 Vence\n");
+        } else if (Densidadepopulacional2 < Densidadepopulacional1){
+            printf("Carta 2 Vence\n");
+        } else { 
+            printf("EMPATE!\n");
+        }
+    default:
+        printf("OPÇÃO INVALIDA!");
+        break;
+    }
     return 0;
     //código finalizado e programa tudo certo com as solicitações
 }
